@@ -1,44 +1,98 @@
 #include <stdio.h>
-#include <string.h>
-
-struct CartasSuperTrunfo
-{ char estado;
-  char codigo[4];
-  char cidade[50];
-  int população;
-};
-
-void lerCarta(struct CartasSuperTrunfo *Carta){
- printf("\nDigite o estado (uma letra de A a H): ");
- scanf("%c",&Carta->estado);
-
- printf("\nDigite o código da carta:");
- scanf("%s",Carta->codigo);
-
- printf("Digite o nome da cidade:");
- scanf("%s",Carta->cidade);
-
- printf("Digite a população:");
- scanf("%d", &Carta->população);
-}
 
 int main(){
-struct CartasSuperTrunfo carta1, carta2;
 
- printf("Insira os dados da carta 1:");
- lerCarta(&carta1);
+  char estado; 
+  char codigo [20];
+  char nome [50];
+  int população;
+  float área;
+  float pib;
+  int Número;
+  float densidade = (float) população / área;
+  float PIB = (float) pib / população;
 
- printf("insira os dados da carta 2:");
- lerCarta(&carta2);
+  printf("Carta 1: \n");
 
- printf("\n\nDados da primeira carta:\n");
- printf("Estado: %c\nCódigo: %s\nCidade: %s\nPopulação: %d\n",
-    carta1.estado, carta1.codigo, carta1.cidade, carta1.população);
+  printf("digite o estado: \n");
+  scanf("%c", &estado);
 
-printf("\nDados da segunda carta:\n");
-printf("Estado: %c\nCódigo: %s\nCidade: %s\nPopulação: %d\n",
-    carta2.estado, carta2.codigo, carta2.cidade, carta2.população);
+  printf("digite o código da carta: \n");
+  scanf("%s", &codigo);
 
-    return 0;
+  printf("digite o nome da cidade: \n");
+  scanf("%s", &nome);
+
+  printf("digite a populção: \n");
+  scanf("%d", &população);
+
+  printf("digite a área em km²: \n");
+  scanf("%f",&área);
+
+  printf("digite o pib: \n");
+  scanf("%f", &pib);
+
+  printf("digite o número e pontos turísticos: \n");
+  scanf("%d", &Número);
+
+  printf("Densidade populacional: %.2f\n");
+
+  printf("Pib per capta: %.2f\n");
+
+  printf("Estado: %c\nCódigo da carta: %s\nNome da cidade: %s\nPopulação: %d\n", estado, codigo, nome, população);
+  printf("Área: %f\nPib: %f\nNúmero de pontos turísticos: %d\nDensidade populacional: %f\n", área, pib, Número, densidade, PIB);
+
+printf("Carta 2: \n");
+
+  printf("digite o estado: \n");
+  scanf("%c", &estado);
+
+  printf("digite o código da carta: \n");
+  scanf("%s", &codigo);
+
+  printf("digite o nome da cidade: \n");
+  scanf("%s", &nome);
+
+  printf("digite a populção: \n");
+  scanf("%d", &população);
+
+  printf("digite a área em km²: \n");
+  scanf("%f",&área);
+
+  printf("digite o pib: \n");
+  scanf("%f", &pib);
+
+  printf("digite o número e pontos turísticos: \n");
+  scanf("%d", &Número);
+
+
+  printf("Estado: %c\nCódigo da carta: %s\nNome da cidade: %s\nPopulação: %d\n", estado, codigo, nome, população);
+  printf("Área: %f\nPib: %f\nNúmero de pontos turísticos: %d\nDensidade populacional: %f\nPib percapta", área, pib, Número, densidade, PIB);
+
+  return 0;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
